@@ -1,4 +1,5 @@
 import os
+
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -10,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-123')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.2.38','127.0.0.1','kittygramman.ddns.net']
+ALLOWED_HOSTS = ['192.168.2.38', '127.0.0.1', 'mylittlekitty.sytes.net']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,8 +55,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -67,33 +66,31 @@ DATABASES = {
     }
 }
 
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 
+        'NAME':
 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 
+        'NAME':
 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 
+        'NAME':
 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 
+        'NAME':
 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
 LANGUAGE_CODE = 'en-us'
-
+        
 TIME_ZONE = 'UTC'
-
+        
 USE_I18N = True
-
+     
 USE_L10N = True
 
 USE_TZ = True
@@ -109,14 +106,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.IsAuthenticated',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
 
-    'DEFAULT_PAGINATION_CLASS': 
+    'DEFAULT_PAGINATION_CLASS':
 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
 

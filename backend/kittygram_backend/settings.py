@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-123')
 
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split()
+ALLOWED_HOSTS = ['*',]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -96,7 +96,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = '/app/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
